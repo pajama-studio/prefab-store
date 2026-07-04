@@ -1,0 +1,11 @@
+# prefab-store reference deployment — copy, rename, deploy.
+name = "prefab-store"
+main = "node_modules/@pajama-studio/prefab-store/dist/server/worker.js"
+compatibility_date = "2026-01-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "prefab-store"
+database_id = "REPLACE_WITH_YOUR_D1_ID"
+
+# wrangler secret put WRITE_TOKEN   ← optional: require bearer auth on writes
