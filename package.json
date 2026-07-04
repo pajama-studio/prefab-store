@@ -1,23 +1,43 @@
 {
   "name": "@pajama-studio/prefab-store",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Generic prefab storage for the Pajama Studio prefab framework: the PrefabStore protocol, a REST client, and an open-source Cloudflare D1 server you can deploy with one wrangler command.",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
-    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" },
-    "./server": { "types": "./dist/server/worker.d.ts", "import": "./dist/server/worker.js" }
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./server": {
+      "types": "./dist/server/worker.d.ts",
+      "import": "./dist/server/worker.js"
+    }
   },
-  "files": ["dist", "server-template", "README.md"],
+  "files": [
+    "dist",
+    "server-template",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsc -p tsconfig.build.json && cp -r src/server/schema.sql src/server/wrangler.toml server-template/ 2>/dev/null || true",
     "test": "vitest run"
   },
-  "dependencies": { "@pajama-studio/prefab-kit": "^0.4.1" },
-  "devDependencies": { "typescript": "^5.6.0", "vitest": "^3.0.0" },
-  "repository": { "type": "git", "url": "git+https://github.com/pajama-studio/prefab-store.git" },
+  "dependencies": {
+    "@pajama-studio/prefab-core": "^0.3.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "vitest": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pajama-studio/prefab-store.git"
+  },
   "homepage": "https://github.com/pajama-studio/prefab-store#readme",
-  "publishConfig": { "access": "public" }
+  "publishConfig": {
+    "access": "public"
+  }
 }

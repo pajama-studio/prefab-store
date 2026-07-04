@@ -1,4 +1,4 @@
-import { validatePrefab } from "@pajama-studio/prefab-kit";
+import { validatePrefab } from "@pajama-studio/prefab-core/schema";
 import type { AnyPrefab } from "../types.js";
 
 /** Open-source prefab-store server for Cloudflare Workers + D1.

@@ -1,4 +1,4 @@
-import type { PrefabStore } from "@pajama-studio/prefab-kit";
+import type { PrefabStore } from "@pajama-studio/prefab-core/schema";
 import type { AnyPrefab } from "./types.js";
 
 /** REST client for any server speaking the prefab-store protocol
