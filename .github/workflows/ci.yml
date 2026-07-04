@@ -1,6 +1,8 @@
 name: CI
 on:
-  push: { branches: [main] }
+  push:
+    branches: [main]
+    tags: ["v*"]   # tag pushes trigger the publish job
   pull_request:
 jobs:
   test-build:
